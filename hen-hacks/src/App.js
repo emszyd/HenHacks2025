@@ -5,7 +5,7 @@ function clickMe(){
   alert("You clicked me.");
 }
 
-function App() {
+export function App() {
   return (
     <div>
       <button onClick={clickMe}>
