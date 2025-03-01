@@ -12,8 +12,8 @@ function App() {
     Food: [],
     Clothing: [],
     Games: [],
-    Bathroom: [],
-    Building: [],
+    Bathroom_products: [],
+    Building_supplies: [],
   });
 
   const handleClickFood = () => {
@@ -33,12 +33,12 @@ function App() {
 
 
   const handleClickBathroomProducts = () => {
-    setCategory('Bathroom')
+    setCategory('Bathroom Products')
     setShowInput(true);
   };
 
   const handleClickBuildingSupplies = () => {
-    setCategory('Building')
+    setCategory('Building Supplies')
     setShowInput(true);
   };
 
