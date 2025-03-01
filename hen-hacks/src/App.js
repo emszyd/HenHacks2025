@@ -96,7 +96,7 @@ function App() {
         {/*this should display the list items... crossing fingers */}
         {category && (
           <div>
-            <h3>{category} Items</h3>
+            <h3>{category} </h3>
             <ul>
               {items[category].map((item, index) => (
                 <li key={index}>
