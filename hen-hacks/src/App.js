@@ -8,6 +8,13 @@ function App() {
   const [userInput, setUserInput] = useState('');
   const [itemCount, setItemCount] = useState('');
   const [category, setCategory] = useState('');
+  const [items, setItems] = useState({
+    Food: [],
+    Clothing: [],
+    Games: [],
+    Bathroom: [],
+    Building: [],
+  });
 
   const handleClickFood = () => {
     setCategory('Food')
@@ -45,6 +52,16 @@ function App() {
  
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    /* state setter function - takes a callback function as an argument. 
+      callback receives previous state (prevItems - current list before update)*/
+    setItems((prevItems) => ({
+      ...prevItems, //spread operator: shallow copy so that the state is not mutated directly. all categories and their items ate kept intact when updated. 
+      [category]: [
+        ...prevItems[category],
+        {name: userInput, count: itemCount },
+      ],
+    }))
     setShowInput(false);
     setUserInput('');
     setItemCount('');
@@ -75,6 +92,21 @@ function App() {
             <button type="submit">Submit</button>
         </form>
         )}
+
+        {/*this should display the list items... crossing fingers */}
+        {category && (
+          <div>
+            <h3>{category} Items</h3>
+            <ul>
+              {items[category].map((item, index) => (
+                <li key={index}>
+                  {item.name} - {item.count}
+                </li>
+              ))}
+            </ul>
+            </div>
+        )}
+
       </div>
 );
 }
