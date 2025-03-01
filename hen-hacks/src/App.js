@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { RouterProvider, createBrowserRouter, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -159,7 +158,7 @@ const router = createBrowserRouter([
 ])
 
 
-function App() {
+export function App() {
   return (
     <div className="App">
       <header className="App-header">
