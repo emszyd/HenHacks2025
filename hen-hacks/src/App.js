@@ -12,8 +12,8 @@ function App() {
     Food: [],
     Clothing: [],
     Games: [],
-    Bathroom_products: [],
-    Building_supplies: [],
+    Bathroom_Products: [],
+    Building_Supplies: [],
   });
 
   const handleClickFood = () => {
