@@ -54,8 +54,8 @@ function App() {
     <div className = "container">
       <div className = "title"> Emergency Pals </div>
       <div className='button-container'>
-        <button onClick={handleClickFood}>Food</button>
-        <button onClick={handleClickClothing}>Clothing</button>
+      <button onClick={handleClickFood}>Food</button>
+      <button onClick={handleClickClothing}>Clothing</button>
         <button onClick={handleClickGames}>Games</button>
         <button onClick={handleClickBathroomProducts}>Bathroom Products</button>
         <button onClick={handleClickBuildingSupplies}>Building Supplies</button>
