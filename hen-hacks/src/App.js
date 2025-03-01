@@ -42,7 +42,7 @@ function App() {
   const handleItemCountChange = (e) => {
     setItemCount(e.target.value);
   }
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowInput(false);
@@ -51,13 +51,15 @@ function App() {
   };
 
   return (
-    <div>
-      <button onClick={handleClickFood}>Food</button>
-      <button onClick={handleClickClothing}>Clothing</button>
-      <button onClick={handleClickGames}>Games</button>
-      <button onClick={handleClickBathroomProducts}>Bathroom Products</button>
-      <button onClick={handleClickBuildingSupplies}>Building Supplies</button>
-    
+    <div className = "container">
+      <div className = "title"> Emergency Pals </div>
+      <div className='button-container'>
+        <button onClick={handleClickFood}>Food</button>
+        <button onClick={handleClickClothing}>Clothing</button>
+        <button onClick={handleClickGames}>Games</button>
+        <button onClick={handleClickBathroomProducts}>Bathroom Products</button>
+        <button onClick={handleClickBuildingSupplies}>Building Supplies</button>
+      </div>
       {showInput && (
         <form onSubmit={handleSubmit}>
           <input
