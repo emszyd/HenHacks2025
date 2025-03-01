@@ -33,12 +33,12 @@ function App() {
 
 
   const handleClickBathroomProducts = () => {
-    setCategory('Bathroom Products')
+    setCategory('Bathroom')
     setShowInput(true);
   };
 
   const handleClickBuildingSupplies = () => {
-    setCategory('Building Supplies')
+    setCategory('Building')
     setShowInput(true);
   };
 
