@@ -162,7 +162,7 @@ const Dashboard = () => {
           <ul>
             {items[category].map((item, index) => (
               <li key={index}>
-                {item.name} - {item.count}
+                {item.name} - {item.count} - {user?.name}
               </li>
             ))}
           </ul>
