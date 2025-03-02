@@ -48,12 +48,20 @@ body{
   align-items: center;
 
 }
+
+@font-face {
+  font-family: medieval;
+  src: url("./OldLondon.ttf");
+}
+
 .title{
   text-align: center;
   font-size: 100px;
-  color: #691d0a;
+  color: #b63312;
   margin-bottom: 20px;
   font-weight: bold;
+  font-family: medieval;
+
 }
 .button-container{
   display: flex;
@@ -99,7 +107,7 @@ button:hover{
 }
 
 .App-header {
-  background-color: #365aa3;
+  background-color: #4669b9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
