@@ -139,31 +139,44 @@ const Dashboard = () => {
       Bathroom_Products: [],
       Building_Supplies: [],
     });
+
+    const [foodButtonClicked, setFoodButtonClicked] = useState(false);
+    const [clothingButtonClicked, setClothingFoodButtonClicked] = useState(false);
   
     const handleClickFood = () => {
       setCategory('Food')
       setShowInput(true);
+      setFoodButtonClicked(true);
+      setClothingFoodButtonClicked(false);
     };
   
     const handleClickClothing = () => {
       setCategory('Clothing')
       setShowInput(true);
+      setFoodButtonClicked(false);
+      setClothingFoodButtonClicked(true);
     };
   
     const handleClickGames = () => {
       setCategory('Games')
       setShowInput(true);
+      setFoodButtonClicked(false);
+      setClothingFoodButtonClicked(false);
     };
   
   
     const handleClickBathroomProducts = () => {
       setCategory('Bathroom_Products')
       setShowInput(true);
+      setFoodButtonClicked(false);
+      setClothingFoodButtonClicked(false);
     };
   
     const handleClickBuildingSupplies = () => {
       setCategory('Building_Supplies')
       setShowInput(true);
+      setFoodButtonClicked(false);
+      setClothingFoodButtonClicked(false);
     };
   
     const handleChange = (e) => {
@@ -243,6 +256,24 @@ const Dashboard = () => {
           </ul>
           </div>
       )}
+
+    {foodButtonClicked &&
+      <>
+      <p>bread - 5 - Kacey Dove</p>
+      <p>tomatoes - 2 - Vibha Iyengar</p>
+      <p>sweet potatoes - 8 - Alexis Vogt</p>
+      <p>corn stalks - 12 - Emma Szydlow</p>
+      </>}
+      {clothingButtonClicked &&
+      <>
+      <p>socks - 8 - Kacey Dove</p>
+      <p>tomatoes - 2 - Vibha Iyengar</p>
+      <p>sweet potatoes - 8 - Alexis Vogt</p>
+      <p>corn stalks - 12 - Emma Szydlow</p>
+      </>}
+
+
+
       <a href="/profile">
       <button >
         Profile
