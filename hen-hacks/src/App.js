@@ -228,7 +228,7 @@ const Dashboard = () => {
     const mailLink = "mailto:" + user?.email +  ""
   return (
     <div className = "container">
-      <img src={epLogo} alt="EmergencyPals Logo" width="200 px"/>
+      <img id="log" src={epLogo} alt="EmergencyPals Logo" width="200 px"/>
     <div className = "title"> Emergency Pals </div>
     <div display="flex">
     <img src={food} alt="fish" width="100 px"/>
@@ -346,7 +346,7 @@ const Login = () => {
   }
   return (
     <>
-    <img id="shield" src={shield} alt="shield" width="300 px"/>
+    <img id="shield" src={shield} alt="shield" width="200 px"/>
       <h3>Login to Dashboard</h3>
       <button className="btn" onClick={handleLogin}>
         Login
