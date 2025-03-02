@@ -74,12 +74,17 @@ const Profile = () => {
 
   return(
     <>
-    <div styles="background-color:red">
-      <h2>{user?.name}</h2>
-      <h3>{user?.email}</h3>
+    <div styles="background-color:red; display:none">
+      <p>
+        <h2>{user?.name}</h2>
+      </p>
+      <p>
+        <h3>{user?.email}</h3>
+      </p>
       <button className="btn" onClick={handleLogout}>
          Logout
        </button>
+       <br></br>
        <a href="/">
       <button >
         Home

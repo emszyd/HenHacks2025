@@ -47,7 +47,9 @@ export function Profile() {
     <>
     <div style="background-color:red">
       <h2>{user?.name}</h2>
+      <br/>
       <h3>{user?.email}</h3>
+      <br/>
       <button className="btn" onClick={handleLogout}>
          Logout
        </button>
