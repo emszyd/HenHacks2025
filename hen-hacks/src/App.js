@@ -151,12 +151,21 @@ const Dashboard = () => {
 
     const [foodButtonClicked, setFoodButtonClicked] = useState(false);
     const [clothingButtonClicked, setClothingFoodButtonClicked] = useState(false);
+    const [gamesButtonClicked, setGamesButtonClicked] = useState(false);
+
+    const[bpButtonClicked, setBPButtonClicked] = useState(false);
+
+    const[bsButtonClicked, setBSButtonClicked] = useState(false);
+
   
     const handleClickFood = () => {
       setCategory('Food')
       setShowInput(true);
       setFoodButtonClicked(true);
       setClothingFoodButtonClicked(false);
+      setGamesButtonClicked(false);
+      setBPButtonClicked(false);
+      setBSButtonClicked(false);
     };
   
     const handleClickClothing = () => {
@@ -164,6 +173,10 @@ const Dashboard = () => {
       setShowInput(true);
       setFoodButtonClicked(false);
       setClothingFoodButtonClicked(true);
+      setGamesButtonClicked(false);
+      setBPButtonClicked(false);
+      setBSButtonClicked(false);
+
     };
   
     const handleClickGames = () => {
@@ -171,6 +184,10 @@ const Dashboard = () => {
       setShowInput(true);
       setFoodButtonClicked(false);
       setClothingFoodButtonClicked(false);
+      setGamesButtonClicked(true);
+      setBPButtonClicked(false);
+      setBSButtonClicked(false);
+
     };
   
   
@@ -179,6 +196,11 @@ const Dashboard = () => {
       setShowInput(true);
       setFoodButtonClicked(false);
       setClothingFoodButtonClicked(false);
+      setGamesButtonClicked(false);
+      setBPButtonClicked(true);
+      setBSButtonClicked(false);
+
+
     };
   
     const handleClickBuildingSupplies = () => {
@@ -186,8 +208,12 @@ const Dashboard = () => {
       setShowInput(true);
       setFoodButtonClicked(false);
       setClothingFoodButtonClicked(false);
+      setGamesButtonClicked(false);
+      setBPButtonClicked(false);
+      setBSButtonClicked(true);
+
     };
-  
+
     const handleChange = (e) => {
       setUserInput(e.target.value);
     };
@@ -277,7 +303,7 @@ const Dashboard = () => {
           </div>
       )}
 
-    {foodButtonClicked &&
+{foodButtonClicked &&
       <>
       <p>bread - 5 - Kacey Dove</p>
       <p>tomatoes - 2 - Vibha Iyengar</p>
@@ -287,10 +313,37 @@ const Dashboard = () => {
       {clothingButtonClicked &&
       <>
       <p>socks - 8 - Kacey Dove</p>
-      <p>tomatoes - 2 - Vibha Iyengar</p>
-      <p>sweet potatoes - 8 - Alexis Vogt</p>
-      <p>corn stalks - 12 - Emma Szydlow</p>
+      <p>t-shirts - 2 - Vibha Iyengar</p>
+      <p>spants - 8 - Alexis Vogt</p>
+      <p>coats - 12 - Emma Szydlow</p>
       </>}
+
+    {gamesButtonClicked &&
+    <>
+    <p>scrabble - 2 - Kacey Dove</p>
+    <p>playing cards - 4 - Vibha Iyengar </p>
+    <p>chess board - 1 - Alexis Vogt</p>
+    <p>monopoly - 1 - Emma Szydlow</p>
+    </>
+    }
+
+  {bpButtonClicked &&
+  <>
+  <p>hand towels - 5 - Kacey Dove</p>
+  <p>soap bottles - 4 - Vibha Iyengar </p>
+  <p>toothpaste- 1 - Alexis Vogt</p>
+  <p>mirror - 1 - Emma Szydlow</p>
+  </>
+  } 
+
+  {bsButtonClicked &&
+    <>
+  <p>concrete slabs - 5 - Kacey Dove</p>
+  <p>planks- 4 - Vibha Iyengar </p>
+<p>tool kit - 1 - Alexis Vogt</p>
+<p>nails - 20 - Emma Szydlow</p>
+</>
+}
 
 
 
