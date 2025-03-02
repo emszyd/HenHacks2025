@@ -197,7 +197,8 @@ const Dashboard = () => {
               </Routes>
               </BrowserRouter>)
     }
-
+   
+    const mailLink = "mailto:" + user?.email +  ""
   return (
     <div className = "container">
     <div className = "title"> Emergency Pals </div>
@@ -231,7 +232,7 @@ const Dashboard = () => {
           <ul>
             {items[category].map((item, index) => (
               <li key={index}>
-                {item.name} - {item.count} - {user?.name}
+                {item.name} - {item.count} - {user?.name} - <a href={mailLink}>Contact</a>
               </li>
             ))}
           </ul>
