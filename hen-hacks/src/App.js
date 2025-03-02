@@ -4,6 +4,14 @@ import { RouterProvider, createBrowserRouter, useNavigate } from 'react-router-d
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from 'axios';
 import { useEffect, useRef, useState, createContext, useContext, useCallback } from 'react'
+import shield from "./shield.svg"
+import epLogo from "./ep_logo.svg"
+import bathroom from "./bathroom.svg"
+import building from "./building.svg"
+import clothes from "./clothes.svg"
+import games from "./games.svg"
+import food from "./food.svg"
+import profile from "./profile.svg"
 
 axios.defaults.withCredentials = true
 
@@ -74,6 +82,7 @@ const Profile = () => {
 
   return(
     <>
+    <img src={profile} alt="profile" width="200 px"/>
     <div styles="background-color:red; display:none">
       <p>
         <h2>{user?.name}</h2>
@@ -219,13 +228,24 @@ const Dashboard = () => {
     const mailLink = "mailto:" + user?.email +  ""
   return (
     <div className = "container">
+      <img src={epLogo} alt="EmergencyPals Logo" width="200 px"/>
     <div className = "title"> Emergency Pals </div>
+    <div display="flex">
+    <img src={food} alt="fish" width="100 px"/>
+    <img src={clothes} alt="clothes" width="100 px" />
+    <img src={games} alt="clothes" width="50 px" />
+    <img src={bathroom} alt="clothes" width="100 px" />
+    <img src={building} alt="clothes" width="100 px" />
+    </div>
+    
     <div className='button-container'>
+      <div>
     <button onClick={handleClickFood}>Food</button>
     <button onClick={handleClickClothing}>Clothing</button>
       <button onClick={handleClickGames}>Games</button>
       <button onClick={handleClickBathroomProducts}>Bathroom Products</button>
       <button onClick={handleClickBuildingSupplies}>Building Supplies</button>
+      </div>
     </div>
     {showInput && (
       <form onSubmit={handleSubmit}>
@@ -326,6 +346,7 @@ const Login = () => {
   }
   return (
     <>
+    <img id="shield" src={shield} alt="shield" width="300 px"/>
       <h3>Login to Dashboard</h3>
       <button className="btn" onClick={handleLogin}>
         Login
